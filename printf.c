@@ -5,7 +5,7 @@ int _printf(char *format, ...)
 {
 	int i = 0, count = 0;
 	int state = 0;
-	char buffer[100];
+	char [100];
 	va_list ap;
 	va_start(ap, format);
 
