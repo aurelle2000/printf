@@ -3,11 +3,11 @@
 
 int _printf(char *format, ...)
 {
+	int i = 0, count = 0;
+	int state = 0;
+	char buffer[100];
 	va_list ap;
 	va_start(ap, format);
-	char buffer[100];
-	int state = 0;
-	int i = 0, count = 0;
 
 	while (format && format[i])
 	{
@@ -36,7 +36,7 @@ int _printf(char *format, ...)
 			case 's':
 			{
 				char *str = va_arg(ap, char *);
-				//_puts(str);
+				/*_puts(str);*/
 				while (*str)
 				{
 					_putchar(*str++);
